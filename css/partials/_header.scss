@@ -1,0 +1,85 @@
+.header {
+  margin-bottom : 3rem;
+
+  .header__proposition {
+    height : 10rem;
+    background : map-get($theme-colors, "yellow");
+    margin-bottom : 3rem;
+
+    @include flex(row, center, center);
+
+    .header__title {
+      font-size : 3.6rem;
+      color : map-get($theme-colors, "black");
+      font-family : FiraGO-Medium;
+
+      span {
+        font-size : 4.8rem;
+        color : #fff;
+      }
+    }
+  }
+
+  .header__services {
+    position : relative;
+
+    background : #fff;
+    padding : 0 3rem;
+
+    @include flex(row, space-between, center);
+
+    .header__text {
+      color : map-get($theme-colors, "secondary");
+      font-size : 1.4rem;
+      padding : 1rem 0;
+      margin : 0;
+
+      position : relative;
+
+      @include flex(row, flex-start, center);
+
+      &:first-child {
+        &::before {
+          content : "\f0d1";
+          margin-right : 1rem;
+          font-size : 2rem;
+
+          position : relative;
+          top : .2rem;
+        }
+      }
+
+      &:last-child {
+        &::after {
+          content : "\f53a";
+          margin-left : 1.5rem;
+          font-size : 2rem;
+          color : map-get($theme-colors, "green");
+
+          position : relative;
+          top : .2rem;
+        }
+      }
+
+      span {
+        font-family : FiraGO-Medium;
+        font-size : 1.2rem;
+        color : map-get($theme-colors, "black");
+        margin : 0 .5rem;
+      }
+    }
+
+    .header__separator {
+      width : 2rem;
+      height : 8rem;
+      background : map-get($theme-colors, "gray");
+      margin-left : 3rem;
+
+      position : absolute;
+      left : 42%;
+      transform : translate(-50%, 0);
+
+      transform : rotate(40deg);
+    }
+  }
+}

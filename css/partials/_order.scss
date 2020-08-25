@@ -1,0 +1,179 @@
+.product__container {
+  margin-bottom : 3rem !important;
+
+  .slider-product {
+    position : relative;
+    overflow : hidden;
+
+    .img__container {
+      width : 100%;
+      height : 40rem;
+      background : #fff;
+
+      @include flex(row, center, center);
+
+      .slider__img {
+        width : 50%;
+        height : auto;
+
+      }
+    }
+
+    .slider__arrow {
+      position :absolute;
+      width : 5rem;
+      height: 5rem;
+      background : map-get($theme-colors, "gray");
+      color : #fff;
+      z-index : 10;
+      transition : .3s ease;
+
+      @include flex(row, flex-end, center);
+
+      &:hover {
+        background : map-get($theme-colors, "secondary");
+      }
+
+      &:first-child {
+        top : 50%;
+        left : -2.5rem;
+        transform : translate(0, -50%);
+
+        border-top-right-radius : 50%;
+        border-bottom-right-radius : 50%;
+        padding-right : .8rem;
+      }
+
+      &:last-child {
+        top : 50%;
+        right : -2.5rem;
+        transform : translate(0, -50%);
+
+        
+        border-top-left-radius : 50%;
+        border-bottom-left-radius : 50%;
+
+        justify-content : flex-start;
+        padding-left : .8rem;
+      }
+    }
+  }
+  .slider-nav {
+    height : 10rem;
+    background : map-get($theme-colors, "yellow");
+    overflow : hidden;
+
+    @include flex(row, flex-start, center);
+
+    .slick-track {
+
+      transform: translate3d(0px, 0px, 0px)!important;
+    }
+
+    .slider__img {
+      width : 8rem;
+      height : 8rem;
+      cursor : pointer;
+      margin-left : 1rem;
+    }
+  }
+}
+
+.order__container {
+  background : map-get($theme-colors, "black");
+  height : 50rem;
+
+  .price__container {
+    margin : 2.4rem 0;
+    
+    @include flex(row, center, center);
+
+    .price {
+      background : #fff;
+      border-radius : 5rem;
+      padding : 0 15%;
+
+      @include flex(row, center, center);
+    }
+    
+    .price__new {
+      font-size : 3.5rem;
+      color : map-get($theme-colors, "red");
+      font-family : FiraGO-Medium;
+      margin-right : .5rem !important;
+    }
+
+    .price__old {
+      font-size : 1.7rem;
+      color : map-get($theme-colors, "yellow");
+      text-decoration : line-through;
+    }
+  }
+
+  .order__form {
+    .input__container {
+      @include flex(column, flex-start, center);
+
+      .order__input {
+        width : 90%;
+        font-family : FiraGO-Medium;
+        font-size : 1.5rem;
+        border-radius : 5rem;
+        border : none;
+        color : map-get($theme-colors, "red");
+        padding : 2.5% 5%;
+        margin-bottom : 2.4rem;
+
+        &::placeholder {
+          color : map-get($theme-colors, "black");
+        }
+      }
+
+      .order__button {
+        color : #fff;
+        background : map-get($theme-colors, "yellow");
+        border : 3px solid map-get($theme-colors, "yellow");
+        transition : .3s ease;
+
+        &:hover {
+          background : #ffffff;
+          color : map-get($theme-colors, "black");
+        }
+      }
+    }
+  }
+
+  .order__messege {
+    width : 90%;
+    margin-top : 4rem;
+    font-size : 1.4rem;
+    text-align : center;
+    color : map-get($theme-colors, "yellow");
+  }
+}
+
+.order-attributes__container {
+  width : 100%;
+  margin-bottom : 3rem;
+  cursor : pointer;
+
+  .order-attributes__header {
+    background : map-get($theme-colors, "black");
+
+    @include flex(row, center, center);
+
+    .order-attributes__title {
+      color : map-get($theme-colors, "black");
+      background : map-get($theme-colors, "yellow");
+      font-family : FiraGO-Medium;
+      padding : 1rem 5rem;
+    }
+  }
+
+  .order-attributes__body {
+    width : 100%;
+    background : map-get($theme-colors, "yellow");
+
+    @include flex(column, center, center);
+  }
+}

@@ -1,0 +1,53 @@
+$theme-colors : (
+  "yellow" : #FBC51B,
+  "black" : #454545,
+  "gray" : #E5E5E5,
+  "red" : #FF6363,
+  "secondary" : #D4D4D4,
+  "green" : #BCE1A0
+);
+
+@mixin flex($direction, $justify, $align) {
+  display : flex;
+  flex-direction : $direction;
+  justify-content : $justify;
+  align-items : $align;
+}
+
+@font-face {
+  font-family : FiraGO-Regular;
+  src : url("../fonts/FiraGO-Regular.ttf");
+}
+
+@font-face {
+  font-family : FiraGO-Medium;
+  src : url("../fonts/FiraGO-Medium.ttf");
+}
+
+* {
+  font-family : FiraGO-Regular;
+  outline : none;
+}
+
+:root {
+  font-size : 10px;
+  body {
+    background : map-get($theme-colors, "gray");
+    font-size : 1.6rem;
+  }
+}
+
+
+a {
+  text-decoration : none;
+  color : map-get($theme-colors, "black");
+
+  &:hover {
+    text-decoration : none;
+  }
+}
+
+.font__awesome {
+  font-family : "Font Awesome 5 Free";
+  font-weight : 900;
+}
